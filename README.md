@@ -4,7 +4,13 @@ Project Title: Web Scrapping with Streamlit Application
 
 2.Aim: Create a user-friendly Streamlit web application that allows users to search for doctors by specialization and location, retrieve detailed doctor information from Practo, and present it in an accessible and interactive format using Pandas and Streamlit.
 
-3.Workflow: The application follows a series of steps to complete the project. 
+3.Installation Requirements: To run the application, you need to install the following packages:
+	i) Streamlit: For creating and managing the web interface.
+	ii) BeautifulSoup4: For parsing HTML content.
+	iii) Requests: For sending HTTP requests to the Practo website.
+	iv) Pandas: For handling and displaying data in a structured format.
+
+4.Workflow: The application follows a series of steps to complete the project. 
 Those steps are:
 	i) User Inputs: Users select a doctor's specialization from the dropdown menu and input a location (e.g., city name) in the text box. Once both the specialization and location are chosen, users submit their search query by clicking the "Scrape" button.
 	
