@@ -1,7 +1,7 @@
+!pip install streamlit_dynamic_filters
 import streamlit as st
-
 import requests
-import streamlit_dynamic_filters 
+from streamlit_dynamic_filters import DynamicFilters
 from urllib.parse import urlparse, urlunparse
 import pandas as pd
 from beautifulsoup4 import BeautifulSoup
