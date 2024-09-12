@@ -5,12 +5,12 @@ from urllib.parse import urlparse, urlunparse
 import pandas as pd
 from bs4 import BeautifulSoup
 
-doctor_options = ['Dentist','Physician','Dermatologist','Gynecologist/Obstetrician',
+doctor_options = ('Dentist','Physician','Dermatologist','Gynecologist/Obstetrician',
                   'Ear Nose Throat (ENT) Specialist','Pediatrician','Ophthalmologist','Dermatologist',
                   'Cardiologist','Psychiatrist','Gastroenterologist','Neurologist','Urologist','Prosthodontist',
                 'Orthodontist','Pediatric Dentist','Endodontist','Implantologist','Ayurveda','Homoeopath','Siddha','Unani',
                 'Yoga & Naturopathy','Acupuncturist','Physiotherapist','Psychologist','Audiologist','Speech Therapist',
-                'Dietitian/Nutritionist']
+                'Dietitian/Nutritionist')
 doctor_list = []
 consultation_fee = []
 web = []
@@ -22,10 +22,11 @@ st.markdown("""<h3 style= 'text-align:center;'> Web Scraping -- Practo (Book Doc
 """,unsafe_allow_html=True)
 
 with st.form('Search Element'):
-    doctor_type= st.selectbox('Specialization',placeholder = "Choose an option",options=doctor_options,index=0)
-    doctor_type = doctor_type.replace(" ", "-").replace("/", "-").replace('&','and').replace("(","").replace(")","")
+    doctor_type= st.selectbox('Specialization',placeholder = "Choose an option",options=doctor_options,index=None)
+    if docctor_type is not None:
+      doctor_type = doctor_type.replace(" ", "-").replace("/", "-").replace('&','and').replace("(","").replace(")","")
     location= st.text_input('Location')
-    submit = st.form_submit_button('Search')
+    submit = st.form_submit_button('Scrape')
     if submit:
         base_url = requests.get(f"https://www.practo.com/{location}/{doctor_type}")
         if base_url.status_code == 200:
