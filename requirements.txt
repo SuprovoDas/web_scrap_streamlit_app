@@ -1,0 +1,5 @@
+pandas
+bs4
+requests
+streamlit_dynamic_filters
+urllib.parse
