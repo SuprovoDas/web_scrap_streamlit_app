@@ -1,7 +1,6 @@
 import streamlit as st
 from bs4 import BeautifulSoup
 import requests
-from streamlit_dynamic_filters import DynamicFilters
 from urllib.parse import urlparse, urlunparse
 import pandas as pd
 
