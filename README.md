@@ -28,5 +28,5 @@ For each doctor, it gathers:
   v) Output: If doctors are found, their profiles are displayed in a DataFrame using Pandas and Streamlit’s data_editor, with columns for name, consultation fees, experience, and a profile link. The total number of doctors is also displayed, along with clickable links to their profiles for more detailed information.
 
   vi) Deployment: Deploy the program on Streamlit Community Cloud to make it accessible to a broader audience, allowing users to interact with the application via a web-based interface.
-Access the application via the provided link: [https://webscrap-practo.streamlit.app] 
+Access the application via the provided link: [https://web-scrap-practo.streamlit.app] 
 
