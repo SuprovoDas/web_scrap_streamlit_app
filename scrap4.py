@@ -1,6 +1,8 @@
 import streamlit as st
 import requests
-
+from streamlit_dynamic_filters import DynamicFilters
+from urllib.parse import urlparse, urlunparse
+import pandas as pd
 from beautifulsoup4 import BeautifulSoup
 
 doctor_options = ['Dentist','Physician','Dermatologist','Gynecologist/Obstetrician',
