@@ -1,9 +1,9 @@
 import streamlit as st
+from bs4 import BeautifulSoup
 import requests
 from streamlit_dynamic_filters import DynamicFilters
 from urllib.parse import urlparse, urlunparse
 import pandas as pd
-from bs4 import BeautifulSoup
 
 doctor_options = ('Dentist','Physician','Dermatologist','Gynecologist/Obstetrician',
                   'Ear Nose Throat (ENT) Specialist','Pediatrician','Ophthalmologist','Dermatologist',
@@ -22,9 +22,9 @@ st.markdown("""<h3 style= 'text-align:center;'> Web Scraping -- Practo (Book Doc
 """,unsafe_allow_html=True)
 
 with st.form('Search Element'):
-    doctor_type= st.selectbox('Specialization',placeholder = "Choose an option",options=doctor_options,index=None)
-    if docctor_type is not None:
-      doctor_type = doctor_type.replace(" ", "-").replace("/", "-").replace('&','and').replace("(","").replace(")","")
+    doctor_type= st.selectbox('Specialization',options=doctor_options,placeholder = 'Choose an option',index=None)
+    if doctor_type is not None:
+        doctor_type = doctor_type.replace(" ", "-").replace("/", "-").replace('&','and').replace("(","").replace(")","")
     location= st.text_input('Location')
     submit = st.form_submit_button('Scrape')
     if submit:
