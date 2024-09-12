@@ -1,9 +1,10 @@
 import streamlit as st
-from beautifulsoup4 import BeautifulSoup
+
 import requests
 from streamlit_dynamic_filters import DynamicFilters
 from urllib.parse import urlparse, urlunparse
 import pandas as pd
+from beautifulsoup4 import BeautifulSoup
 
 doctor_options = ['Dentist','Physician','Dermatologist','Gynecologist/Obstetrician',
                   'Ear Nose Throat (ENT) Specialist','Pediatrician','Ophthalmologist','Dermatologist',
