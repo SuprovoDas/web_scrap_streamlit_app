@@ -1,5 +1,5 @@
 import streamlit as st
-from bs4 import BeautifulSoup
+from beautifulsoup4 import BeautifulSoup
 import requests
 from streamlit_dynamic_filters import DynamicFilters
 from urllib.parse import urlparse, urlunparse
