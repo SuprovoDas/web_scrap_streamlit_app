@@ -1,4 +1,3 @@
-!pip install streamlit_dynamic_filters
 import streamlit as st
 import requests
 from streamlit_dynamic_filters import DynamicFilters
